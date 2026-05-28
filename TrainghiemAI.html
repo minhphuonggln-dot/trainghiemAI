@@ -678,270 +678,269 @@
                         </div>
 
                         <div class="grid md:grid-cols-12 gap-8">
-                            <!-- Left: Steps explanation -->
-                            <div
-                                class="md:col-span-5 bg-gray-50 p-6 rounded-xl border border-gray-200 flex flex-col justify-center">
-                                <p class="text-gray-700 mb-6 leading-relaxed">
-                                    Ví dụ: Bạn muốn viết bài bán hàng cho ngành <strong class="text-gray-900">"Thẩm mỹ
-                                        viện"</strong>.<br><br>
-                                    Thay vì tự nghĩ ý tưởng, AI có thể giúp bạn:
-                                </p>
-                                <ul class="space-y-4 mb-8 text-sm text-gray-600">
-                                    <li><i class="fas fa-search text-mindx-orange mr-2"></i> <strong>Bước 1:</strong> Tự
-                                        động quét 50 bài viết Viral nhất của đối thủ.</li>
-                                    <li><i class="fas fa-brain text-mindx-orange mr-2"></i> <strong>Bước 2:</strong>
-                                        Phân tích & trích xuất ra Pattern (Công thức chung).</li>
-                                    <li><i class="fas fa-magic text-mindx-orange mr-2"></i> <strong>Bước 3:</strong>
-                                        Dùng Pattern đó để đẻ ra hàng loạt bài viết mới.</li>
-                                </ul>
+                        <!-- Left: Steps explanation -->
+                        <div
+                            class="md:col-span-5 bg-gray-50 p-6 rounded-xl border border-gray-200 flex flex-col justify-center">
+                            <p class="text-gray-700 mb-6 leading-relaxed">
+                                Ví dụ: Bạn muốn viết bài bán cho<strong class="text-gray-900">"khoá học
+                                    AI"</strong>.<br><br>
+                                Thay vì tự nghĩ ý tưởng, AI có thể giúp bạn:
+                            </p>
+                            <ul class="space-y-4 mb-8 text-sm text-gray-600">
+                                <li><i class="fas fa-search text-mindx-orange mr-2"></i> <strong>Bước 1:</strong> Tự
+                                    động quét 50 bài viết Viral nhất của đối thủ.</li>
+                                <li><i class="fas fa-brain text-mindx-orange mr-2"></i> <strong>Bước 2:</strong>
+                                    Phân tích & trích xuất ra Pattern (Công thức chung).</li>
+                                <li><i class="fas fa-magic text-mindx-orange mr-2"></i> <strong>Bước 3:</strong>
+                                    Dùng Pattern đó để đẻ ra hàng loạt bài viết mới.</li>
+                            </ul>
 
-                                <button onclick="runContentSim(this)"
-                                    class="w-full bg-mindx-orange text-white font-bold py-4 rounded-lg hover:bg-orange-600 transition flex items-center justify-center shadow-lg transform hover:-translate-y-1">
-                                    <i class="fas fa-bolt mr-2"></i> Kích Hoạt Agent Phân Tích
-                                </button>
-                            </div>
+                            <button onclick="runContentSim(this)"
+                                class="w-full bg-mindx-orange text-white font-bold py-4 rounded-lg hover:bg-orange-600 transition flex items-center justify-center shadow-lg transform hover:-translate-y-1">
+                                <i class="fas fa-bolt mr-2"></i> Kích Hoạt Agent Phân Tích
+                            </button>
+                        </div>
 
-                            <!-- Right: Output -->
-                            <div id="result-mkt-3a" class="md:col-span-7 hidden flex-col">
-                                <h4 class="font-bold text-lg mb-4 text-mindx-orange border-b pb-2 uppercase">Bài viết
-                                    quảng cáo được tạo tự động</h4>
+                        <!-- Right: Output -->
+                        <div id="result-mkt-3a" class="md:col-span-7 hidden flex-col">
+                            <h4 class="font-bold text-lg mb-4 text-mindx-orange border-b pb-2 uppercase">Bài viết
+                                quảng cáo được tạo tự động</h4>
 
-                                <div
-                                    class="bg-white rounded-lg border border-orange-200 shadow-sm overflow-hidden text-sm">
-                                    <div class="p-5 bg-orange-50/30">
-                                        <div class="mb-5 flex items-center gap-2">
-                                            <span
-                                                class="bg-green-100 text-green-800 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm border border-green-200">
-                                                <i class="fas fa-check-circle mr-1"></i> Bài viết hoàn chỉnh (Dựa trên
-                                                Pattern Viral)
-                                            </span>
-                                        </div>
-                                        <div class="space-y-4 text-gray-800 text-base leading-relaxed">
-                                            <p class="text-lg font-bold text-red-600">BẠN ĐANG LÃNG PHÍ KHOẢNG 23H - 3
-                                                NGÀY LÀM VIỆC CHỈ ĐỂ THỰC HIỆN CÁC TASK THỦ CÔNG?</p>
+                            <div class="bg-white rounded-lg border border-orange-200 shadow-sm overflow-hidden text-sm">
+                                <div class="p-5 bg-orange-50/30">
+                                    <div class="mb-5 flex items-center gap-2">
+                                        <span
+                                            class="bg-green-100 text-green-800 px-3 py-1.5 rounded-full text-xs font-bold shadow-sm border border-green-200">
+                                            <i class="fas fa-check-circle mr-1"></i> Bài viết hoàn chỉnh (Dựa trên
+                                            Pattern Viral)
+                                        </span>
+                                    </div>
+                                    <div class="space-y-4 text-gray-800 text-base leading-relaxed">
+                                        <p class="text-lg font-bold text-red-600">BẠN ĐANG LÃNG PHÍ KHOẢNG 23H - 3
+                                            NGÀY LÀM VIỆC CHỈ ĐỂ THỰC HIỆN CÁC TASK THỦ CÔNG?</p>
 
-                                            <p>Việc mất thời gian vào các công việc lặp lại không chỉ khiến bạn quá tải,
-                                                mà còn kìm hãm cơ hội tăng lương, thăng chức, thậm chí là đối mặt với
-                                                nguy cơ layoff trước người biết dùng AI.</p>
+                                        <p>Việc mất thời gian vào các công việc lặp lại không chỉ khiến bạn quá tải,
+                                            mà còn kìm hãm cơ hội tăng lương, thăng chức, thậm chí là đối mặt với
+                                            nguy cơ layoff trước người biết dùng AI.</p>
 
-                                            <p>Đó là lý do MindX xây dựng lộ trình <strong class="text-mindx-navy">AI
-                                                    FOR WORK</strong><br>
-                                                <span class="ml-2">- <strong>50% lý thuyết:</strong> Có tư duy dùng AI
-                                                    đúng cách, nắm chắc bản chất để sử dụng hiệu quả</span><br>
-                                                <span class="ml-2">- <strong>50% thực hành:</strong> Làm trực tiếp dự án
-                                                    thật tại lớp cùng giảng viên và mentor hướng dẫn 2:1</span>
-                                            </p>
+                                        <p>Đó là lý do MindX xây dựng lộ trình <strong class="text-mindx-navy">AI
+                                                FOR WORK</strong><br>
+                                            <span class="ml-2">- <strong>50% lý thuyết:</strong> Có tư duy dùng AI
+                                                đúng cách, nắm chắc bản chất để sử dụng hiệu quả</span><br>
+                                            <span class="ml-2">- <strong>50% thực hành:</strong> Làm trực tiếp dự án
+                                                thật tại lớp cùng giảng viên và mentor hướng dẫn 2:1</span>
+                                        </p>
 
-                                            <p>Sau khóa học bạn sẽ:<br>
-                                                <span class="ml-2">✔ Xây dựng hệ thống Agentic AI: Tự động hóa quy trình
-                                                    làm việc</span><br>
-                                                <span class="ml-2">✔ Ứng dụng AI phân tích dữ liệu: Tạo báo cáo trực
-                                                    quan và đề xuất hành động phù hợp</span><br>
-                                                <span class="ml-2">✔ Biết cách kết hợp các công cụ AI: Antigravity,
-                                                    ChatGPT, Gemini, Perplexity, NotebookLM, Google AI Studio,...</span>
-                                            </p>
+                                        <p>Sau khóa học bạn sẽ:<br>
+                                            <span class="ml-2">✔ Xây dựng hệ thống Agentic AI: Tự động hóa quy trình
+                                                làm việc</span><br>
+                                            <span class="ml-2">✔ Ứng dụng AI phân tích dữ liệu: Tạo báo cáo trực
+                                                quan và đề xuất hành động phù hợp</span><br>
+                                            <span class="ml-2">✔ Biết cách kết hợp các công cụ AI: Antigravity,
+                                                ChatGPT, Gemini, Perplexity, NotebookLM, Google AI Studio,...</span>
+                                        </p>
 
-                                            <p class="font-bold text-mindx-orange mt-4">📩 Inbox ngay để được tư vấn lộ
-                                                trình phù hợp và giữ ưu đãi hôm nay!</p>
-                                        </div>
+                                        <p class="font-bold text-mindx-orange mt-4">📩 Inbox ngay để được tư vấn lộ
+                                            trình phù hợp và giữ ưu đãi hôm nay!</p>
+                                    </div>
 
-                                        <!-- CTA Block 3A -->
-                                        <div id="cta-block-3a"
-                                            class="mt-8 p-6 bg-orange-50 rounded-xl border border-orange-200 cta-block">
-                                            <p class="mb-4 text-gray-800"><strong class="text-mindx-orange">💡 Bạn vừa
-                                                    thấy AI tự động
-                                                    Research, tìm Pattern và Viết Content trong 3 bước.</strong> Nhưng
-                                                để Content thực
-                                                sự chạm đến Insight khách hàng thay vì văn phong "công nghiệp", bạn cần
-                                                học cách Build
-                                                Persona cho AI.</p>
-                                            <p class="font-bold mb-2">Trong chương trình, bạn sẽ học:</p>
-                                            <ul class="space-y-2 mb-6 text-gray-700 text-sm md:text-base">
-                                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Kỹ thuật
-                                                    "Role-play": Ép AI
-                                                    trở thành Copywriter chuyên nghiệp với văn phong brand của bạn.</li>
-                                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Tạo hệ thống
-                                                    tái chế Content
-                                                    (Repurpose): Từ 1 Video YouTube ra 5 bài Facebook, 3 Email, 1 Blog
-                                                    post trong 5
-                                                    phút.</li>
-                                                <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Lên plan nội
-                                                    dung 30 ngày tự
-                                                    động bám sát Funnel Marketing.</li>
-                                            </ul>
-                                            <div class="text-center">
-                                                <button onclick="openModal()"
-                                                    class="inline-block bg-mindx-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-md font-title text-lg">
-                                                    → KHÁM PHÁ CHƯƠNG TRÌNH NGAY
-                                                </button>
-                                            </div>
+                                    <!-- CTA Block 3A -->
+                                    <div id="cta-block-3a"
+                                        class="mt-8 p-6 bg-orange-50 rounded-xl border border-orange-200 cta-block">
+                                        <p class="mb-4 text-gray-800"><strong class="text-mindx-orange">💡 Bạn vừa
+                                                thấy AI tự động
+                                                Research, tìm Pattern và Viết Content trong 3 bước.</strong> Nhưng
+                                            để Content thực
+                                            sự chạm đến Insight khách hàng thay vì văn phong "công nghiệp", bạn cần
+                                            học cách Build
+                                            Persona cho AI.</p>
+                                        <p class="font-bold mb-2">Trong chương trình, bạn sẽ học:</p>
+                                        <ul class="space-y-2 mb-6 text-gray-700 text-sm md:text-base">
+                                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Kỹ thuật
+                                                "Role-play": Ép AI
+                                                trở thành Copywriter chuyên nghiệp với văn phong brand của bạn.</li>
+                                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Tạo hệ thống
+                                                tái chế Content
+                                                (Repurpose): Từ 1 Video YouTube ra 5 bài Facebook, 3 Email, 1 Blog
+                                                post trong 5
+                                                phút.</li>
+                                            <li><i class="fas fa-check-circle text-green-500 mr-2"></i> Lên plan nội
+                                                dung 30 ngày tự
+                                                động bám sát Funnel Marketing.</li>
+                                        </ul>
+                                        <div class="text-center">
+                                            <button onclick="openModal()"
+                                                class="inline-block bg-mindx-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-md font-title text-lg">
+                                                → KHÁM PHÁ CHƯƠNG TRÌNH NGAY
+                                            </button>
                                         </div>
                                     </div>
                                 </div>
                             </div>
                         </div>
                     </div>
+                </div>
 
-                    <!-- KỊCH BẢN 3B -->
-                    <div class="flex items-center gap-3 mb-4 mt-6">
-                        <span class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-bold">Demo 3B</span>
-                        <h3 class="text-2xl font-bold font-title text-mindx-orange">Từ Dữ Liệu Quảng Cáo → Dashboard →
-                            Phân Tích Nhanh</h3>
+                <!-- KỊCH BẢN 3B -->
+                <div class="flex items-center gap-3 mb-4 mt-6">
+                    <span class="bg-gray-800 text-white px-3 py-1 rounded-full text-sm font-bold">Demo 3B</span>
+                    <h3 class="text-2xl font-bold font-title text-mindx-orange">Từ Dữ Liệu Quảng Cáo → Dashboard →
+                        Phân Tích Nhanh</h3>
+                </div>
+
+                <!-- Bảng dữ liệu thô -->
+                <div class="mb-6 grid md:grid-cols-12 gap-6 items-end">
+                    <div class="md:col-span-8">
+                        <p class="font-bold mb-2 text-sm text-gray-700">Bước 1: Dữ liệu xuất thô từ Facebook Ads
+                            Manager:</p>
+                        <div class="table-container overflow-x-auto bg-white rounded-lg border shadow-sm">
+                            <table class="min-w-full text-xs md:text-sm text-left">
+                                <thead class="bg-gray-100 text-gray-700 font-mono">
+                                    <tr>
+                                        <th class="px-4 py-2 border-r">Campaign</th>
+                                        <th class="px-4 py-2">Chi phí</th>
+                                        <th class="px-4 py-2">CTR</th>
+                                        <th class="px-4 py-2 bg-gray-200">ROAS</th>
+                                    </tr>
+                                </thead>
+                                <tbody class="divide-y font-mono text-gray-600">
+                                    <tr>
+                                        <td class="px-4 py-2 border-r font-bold">Campaign_Retarget</td>
+                                        <td class="px-4 py-2">4.200.000đ</td>
+                                        <td class="px-4 py-2">2,8%</td>
+                                        <td class="px-4 py-2 bg-gray-50">1,8x</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 border-r font-bold">Campaign_Cold</td>
+                                        <td class="px-4 py-2">6.800.000đ</td>
+                                        <td class="px-4 py-2">0,9%</td>
+                                        <td class="px-4 py-2 bg-gray-50">0,7x</td>
+                                    </tr>
+                                    <tr>
+                                        <td class="px-4 py-2 border-r font-bold">Campaign_Lookalike</td>
+                                        <td class="px-4 py-2">3.100.000đ</td>
+                                        <td class="px-4 py-2">3,2%</td>
+                                        <td class="px-4 py-2 bg-gray-50">4,1x</td>
+                                    </tr>
+                                </tbody>
+                            </table>
+                        </div>
+                        <div class="mt-2 text-sm text-gray-500 bg-gray-50 p-2 rounded inline-block">
+                            Ngân sách tháng: <strong>20 triệu</strong> · Đã tiêu (ngày 15): <strong>14,1
+                                triệu</strong>
+                        </div>
                     </div>
 
-                    <!-- Bảng dữ liệu thô -->
-                    <div class="mb-6 grid md:grid-cols-12 gap-6 items-end">
-                        <div class="md:col-span-8">
-                            <p class="font-bold mb-2 text-sm text-gray-700">Bước 1: Dữ liệu xuất thô từ Facebook Ads
-                                Manager:</p>
-                            <div class="table-container overflow-x-auto bg-white rounded-lg border shadow-sm">
-                                <table class="min-w-full text-xs md:text-sm text-left">
-                                    <thead class="bg-gray-100 text-gray-700 font-mono">
+                    <div class="md:col-span-4 bg-gray-50 p-4 border rounded-lg h-full flex flex-col justify-end">
+                        <label class="block text-sm font-bold mb-2 text-gray-800">Nhập Mục tiêu ROAS KPI của
+                            bạn:</label>
+                        <input type="text" value="2.0"
+                            class="w-full text-center p-3 border border-gray-300 rounded focus:ring-2 focus:ring-mindx-orange outline-none mb-4 font-mono font-bold text-lg">
+                        <button onclick="runSim(this, 'result-mkt-1')"
+                            class="w-full bg-mindx-orange text-white font-bold py-3 rounded-full hover:bg-orange-600 transition shadow-lg transform hover:-translate-y-1">
+                            <i class="fas fa-chart-pie mr-2"></i> AI phân tích & tạo Dashboard
+                        </button>
+                    </div>
+                </div>
+
+                <!-- Output -->
+                <div id="result-mkt-1" class="hidden bg-[#1e293b] rounded-xl p-6 md:p-8 text-white shadow-inner">
+                    <div class="flex justify-between items-center border-b border-slate-600 pb-4 mb-6">
+                        <h4 class="font-bold text-xl font-title text-white">Bước 2: Dashboard cá nhân hóa theo KPI
+                            (2.0)</h4>
+                        <span class="text-xs bg-slate-800 px-3 py-1 rounded text-slate-300 shadow">Tạo trong
+                            8.4s</span>
+                    </div>
+
+                    <div class="grid md:grid-cols-12 gap-8">
+                        <div class="md:col-span-7 space-y-6">
+                            <div
+                                class="table-container overflow-x-auto bg-slate-800 rounded-lg border border-slate-700 shadow-sm">
+                                <table class="min-w-full text-sm text-left">
+                                    <thead class="bg-slate-700 text-slate-200">
                                         <tr>
-                                            <th class="px-4 py-2 border-r">Campaign</th>
-                                            <th class="px-4 py-2">Chi phí</th>
-                                            <th class="px-4 py-2">CTR</th>
-                                            <th class="px-4 py-2 bg-gray-200">ROAS</th>
+                                            <th class="px-4 py-2 border-r border-slate-600">Campaign</th>
+                                            <th class="px-4 py-2">ROAS</th>
+                                            <th class="px-4 py-2 text-center">So với KPI</th>
+                                            <th class="px-4 py-2">Đánh giá AI</th>
                                         </tr>
                                     </thead>
-                                    <tbody class="divide-y font-mono text-gray-600">
+                                    <tbody class="divide-y divide-slate-600 font-medium">
                                         <tr>
-                                            <td class="px-4 py-2 border-r font-bold">Campaign_Retarget</td>
-                                            <td class="px-4 py-2">4.200.000đ</td>
-                                            <td class="px-4 py-2">2,8%</td>
-                                            <td class="px-4 py-2 bg-gray-50">1,8x</td>
+                                            <td class="px-4 py-2 border-r border-slate-600">Lookalike</td>
+                                            <td class="px-4 py-2">4,1x</td>
+                                            <td class="px-4 py-2 text-center text-green-400">Vượt xa</td>
+                                            <td class="px-4 py-2 text-xs">🟢 Nên rót thêm ngân sách</td>
                                         </tr>
                                         <tr>
-                                            <td class="px-4 py-2 border-r font-bold">Campaign_Cold</td>
-                                            <td class="px-4 py-2">6.800.000đ</td>
-                                            <td class="px-4 py-2">0,9%</td>
-                                            <td class="px-4 py-2 bg-gray-50">0,7x</td>
+                                            <td class="px-4 py-2 border-r border-slate-600">Retarget</td>
+                                            <td class="px-4 py-2">1,8x</td>
+                                            <td class="px-4 py-2 text-center text-yellow-400">Chưa đạt</td>
+                                            <td class="px-4 py-2 text-xs">🟡 Cần tối ưu thêm</td>
                                         </tr>
                                         <tr>
-                                            <td class="px-4 py-2 border-r font-bold">Campaign_Lookalike</td>
-                                            <td class="px-4 py-2">3.100.000đ</td>
-                                            <td class="px-4 py-2">3,2%</td>
-                                            <td class="px-4 py-2 bg-gray-50">4,1x</td>
+                                            <td class="px-4 py-2 border-r border-slate-600">Cold</td>
+                                            <td class="px-4 py-2">0,7x</td>
+                                            <td class="px-4 py-2 text-center text-red-400">Quá thấp</td>
+                                            <td class="px-4 py-2 text-xs">🔴 Cắt ngân sách ngay</td>
                                         </tr>
                                     </tbody>
                                 </table>
                             </div>
-                            <div class="mt-2 text-sm text-gray-500 bg-gray-50 p-2 rounded inline-block">
-                                Ngân sách tháng: <strong>20 triệu</strong> · Đã tiêu (ngày 15): <strong>14,1
-                                    triệu</strong>
+
+                            <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
+                                <div class="flex justify-between text-sm mb-1 font-mono">
+                                    <span>Đã dùng: 70%</span>
+                                    <span>Ngân sách tháng</span>
+                                </div>
+                                <div class="w-full bg-slate-700 rounded-full h-3 mb-2">
+                                    <div class="bg-red-500 h-3 rounded-full" style="width: 70%"></div>
+                                </div>
+                                <p class="text-xs text-red-400 font-semibold"><i
+                                        class="fas fa-exclamation-triangle mr-1"></i> Dự báo: Hết ngân sách ngày 22
+                                    nếu giữ tốc độ hiện tại.</p>
                             </div>
                         </div>
 
-                        <div class="md:col-span-4 bg-gray-50 p-4 border rounded-lg h-full flex flex-col justify-end">
-                            <label class="block text-sm font-bold mb-2 text-gray-800">Nhập Mục tiêu ROAS KPI của
-                                bạn:</label>
-                            <input type="text" value="2.0"
-                                class="w-full text-center p-3 border border-gray-300 rounded focus:ring-2 focus:ring-mindx-orange outline-none mb-4 font-mono font-bold text-lg">
-                            <button onclick="runSim(this, 'result-mkt-1')"
-                                class="w-full bg-mindx-orange text-white font-bold py-3 rounded-full hover:bg-orange-600 transition shadow-lg transform hover:-translate-y-1">
-                                <i class="fas fa-chart-pie mr-2"></i> AI phân tích & tạo Dashboard
-                            </button>
-                        </div>
-                    </div>
-
-                    <!-- Output -->
-                    <div id="result-mkt-1" class="hidden bg-[#1e293b] rounded-xl p-6 md:p-8 text-white shadow-inner">
-                        <div class="flex justify-between items-center border-b border-slate-600 pb-4 mb-6">
-                            <h4 class="font-bold text-xl font-title text-white">Bước 2: Dashboard cá nhân hóa theo KPI
-                                (2.0)</h4>
-                            <span class="text-xs bg-slate-800 px-3 py-1 rounded text-slate-300 shadow">Tạo trong
-                                8.4s</span>
-                        </div>
-
-                        <div class="grid md:grid-cols-12 gap-8">
-                            <div class="md:col-span-7 space-y-6">
-                                <div
-                                    class="table-container overflow-x-auto bg-slate-800 rounded-lg border border-slate-700 shadow-sm">
-                                    <table class="min-w-full text-sm text-left">
-                                        <thead class="bg-slate-700 text-slate-200">
-                                            <tr>
-                                                <th class="px-4 py-2 border-r border-slate-600">Campaign</th>
-                                                <th class="px-4 py-2">ROAS</th>
-                                                <th class="px-4 py-2 text-center">So với KPI</th>
-                                                <th class="px-4 py-2">Đánh giá AI</th>
-                                            </tr>
-                                        </thead>
-                                        <tbody class="divide-y divide-slate-600 font-medium">
-                                            <tr>
-                                                <td class="px-4 py-2 border-r border-slate-600">Lookalike</td>
-                                                <td class="px-4 py-2">4,1x</td>
-                                                <td class="px-4 py-2 text-center text-green-400">Vượt xa</td>
-                                                <td class="px-4 py-2 text-xs">🟢 Nên rót thêm ngân sách</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-4 py-2 border-r border-slate-600">Retarget</td>
-                                                <td class="px-4 py-2">1,8x</td>
-                                                <td class="px-4 py-2 text-center text-yellow-400">Chưa đạt</td>
-                                                <td class="px-4 py-2 text-xs">🟡 Cần tối ưu thêm</td>
-                                            </tr>
-                                            <tr>
-                                                <td class="px-4 py-2 border-r border-slate-600">Cold</td>
-                                                <td class="px-4 py-2">0,7x</td>
-                                                <td class="px-4 py-2 text-center text-red-400">Quá thấp</td>
-                                                <td class="px-4 py-2 text-xs">🔴 Cắt ngân sách ngay</td>
-                                            </tr>
-                                        </tbody>
-                                    </table>
-                                </div>
-
-                                <div class="bg-slate-800 p-4 rounded-lg border border-slate-700">
-                                    <div class="flex justify-between text-sm mb-1 font-mono">
-                                        <span>Đã dùng: 70%</span>
-                                        <span>Ngân sách tháng</span>
-                                    </div>
-                                    <div class="w-full bg-slate-700 rounded-full h-3 mb-2">
-                                        <div class="bg-red-500 h-3 rounded-full" style="width: 70%"></div>
-                                    </div>
-                                    <p class="text-xs text-red-400 font-semibold"><i
-                                            class="fas fa-exclamation-triangle mr-1"></i> Dự báo: Hết ngân sách ngày 22
-                                        nếu giữ tốc độ hiện tại.</p>
-                                </div>
-                            </div>
-
-                            <div class="md:col-span-5">
-                                <h5 class="text-sm text-slate-400 mb-3 uppercase font-bold tracking-wider">Phân tích
-                                    nhanh bằng AI</h5>
-                                <div
-                                    class="bg-slate-800 p-5 rounded-lg text-sm leading-relaxed space-y-4 border border-slate-700 h-full">
-                                    <p><strong class="text-green-400">✅ Lookalike vượt mục tiêu:</strong> Nên rót thêm
-                                        30% ngân sách từ Cold sang đây ngay.</p>
-                                    <p><strong class="text-red-400">🔴 Cảnh báo KPI:</strong> Campaign Cold đang lỗ nặng
-                                        so với mốc 2.0, cần tắt ngay để bảo toàn ngân sách.</p>
-                                </div>
+                        <div class="md:col-span-5">
+                            <h5 class="text-sm text-slate-400 mb-3 uppercase font-bold tracking-wider">Phân tích
+                                nhanh bằng AI</h5>
+                            <div
+                                class="bg-slate-800 p-5 rounded-lg text-sm leading-relaxed space-y-4 border border-slate-700 h-full">
+                                <p><strong class="text-green-400">✅ Lookalike vượt mục tiêu:</strong> Nên rót thêm
+                                    30% ngân sách từ Cold sang đây ngay.</p>
+                                <p><strong class="text-red-400">🔴 Cảnh báo KPI:</strong> Campaign Cold đang lỗ nặng
+                                    so với mốc 2.0, cần tắt ngay để bảo toàn ngân sách.</p>
                             </div>
                         </div>
                     </div>
-
-                    <!-- CTA Block 3 -->
-                    <div id="cta-block-3" class="mt-8 p-6 bg-orange-50 rounded-xl border border-orange-200 cta-block">
-                        <p class="mb-4 text-gray-800"><strong class="text-mindx-orange">💡 Bạn vừa thấy dữ liệu thô biến
-                                thành dashboard và insight trong 10 giây.</strong> Để tự xây hệ thống kết nối Google
-                            Sheets, tự động cập nhật và báo cáo tự động, bạn cần học cách thiết kế AI Workflow.</p>
-                        <p class="font-bold mb-2">Trong chương trình, bạn sẽ học:</p>
-                        <ul class="space-y-2 mb-6 text-gray-700 text-sm md:text-base">
-                            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Tự động tạo báo cáo hiệu quả
-                                FB/Google Ads từ dữ liệu thô.</li>
-                            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Viết content đa kênh (Facebook,
-                                TikTok, Email) chỉ từ 1 brief gốc — nhanh gấp 10 lần.</li>
-                            <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Xây lịch content 1 tháng và
-                                brief creative trong 30 phút bằng AI.</li>
-                        </ul>
-                        <div class="text-center">
-                            <button onclick="openModal()"
-                                class="inline-block bg-mindx-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-md font-title text-lg">
-                                → KHÁM PHÁ CHƯƠNG TRÌNH NGAY
-                            </button>
-                        </div>
-                    </div>
-
-
                 </div>
+
+                <!-- CTA Block 3 -->
+                <div id="cta-block-3" class="mt-8 p-6 bg-orange-50 rounded-xl border border-orange-200 cta-block">
+                    <p class="mb-4 text-gray-800"><strong class="text-mindx-orange">💡 Bạn vừa thấy dữ liệu thô biến
+                            thành dashboard và insight trong 10 giây.</strong> Để tự xây hệ thống kết nối Google
+                        Sheets, tự động cập nhật và báo cáo tự động, bạn cần học cách thiết kế AI Workflow.</p>
+                    <p class="font-bold mb-2">Trong chương trình, bạn sẽ học:</p>
+                    <ul class="space-y-2 mb-6 text-gray-700 text-sm md:text-base">
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Tự động tạo báo cáo hiệu quả
+                            FB/Google Ads từ dữ liệu thô.</li>
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Viết content đa kênh (Facebook,
+                            TikTok, Email) chỉ từ 1 brief gốc — nhanh gấp 10 lần.</li>
+                        <li><i class="fas fa-check-circle text-orange-500 mr-2"></i> Xây lịch content 1 tháng và
+                            brief creative trong 30 phút bằng AI.</li>
+                    </ul>
+                    <div class="text-center">
+                        <button onclick="openModal()"
+                            class="inline-block bg-mindx-red text-white px-8 py-3 rounded-full font-bold hover:bg-red-700 transition shadow-md font-title text-lg">
+                            → KHÁM PHÁ CHƯƠNG TRÌNH NGAY
+                        </button>
+                    </div>
+                </div>
+
+
             </div>
+        </div>
         </div>
 
         <!-- ============================================== -->
@@ -1723,10 +1722,10 @@
 
             // Lấy dữ liệu từ form
             const formData = new FormData(e.target);
-            
+
             // Lấy UTM parameters từ URL hiện tại
             const urlParams = new URLSearchParams(window.location.search);
-            
+
             const data = {
                 name: formData.get('name'),
                 phone: formData.get('phone'),
