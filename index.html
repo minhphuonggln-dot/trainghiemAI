@@ -1149,43 +1149,43 @@
                 <form onsubmit="submitForm(event)" class="space-y-4">
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-1">Họ và tên *</label>
-                        <input type="text" required
+                        <input type="text" name="hoTen" required
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mindx-navy outline-none"
                             placeholder="Nhập họ tên của bạn">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-1">Số điện thoại *</label>
-                        <input type="tel" required
+                        <input type="tel" name="soDienThoai" required
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mindx-navy outline-none"
                             placeholder="Nhập số điện thoại">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-1">Địa chỉ Email *</label>
-                        <input type="email" required
+                        <input type="email" name="email" required
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mindx-navy outline-none"
                             placeholder="Nhập email">
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-1">Khu vực *</label>
-                        <select required
+                        <select name="khuVuc" required
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mindx-navy outline-none text-gray-700">
                             <option value="">Chọn khu vực</option>
-                            <option>Hà Nội</option>
-                            <option>TP.HCM</option>
-                            <option>Tỉnh thành khác</option>
+                            <option value="Hà Nội">Hà Nội</option>
+                            <option value="TP.HCM">TP.HCM</option>
+                            <option value="Tỉnh thành khác">Tỉnh thành khác</option>
                         </select>
                     </div>
                     <div>
                         <label class="block text-sm font-bold text-gray-700 mb-1">Bộ phận / Ngành nghề *</label>
-                        <select required
+                        <select name="nganhNghe" required
                             class="w-full px-4 py-2 border border-gray-300 rounded-lg focus:ring-2 focus:ring-mindx-navy outline-none text-gray-700">
                             <option value="">Chọn nhóm đối tượng</option>
-                            <option>Sinh viên / Fresher</option>
-                            <option>Nhân sự (HR)</option>
-                            <option>Marketing / Sales</option>
-                            <option>Tài chính / Kế toán</option>
-                            <option>Chủ doanh nghiệp / Quản lý</option>
-                            <option>Khác</option>
+                            <option value="Sinh viên / Fresher">Sinh viên / Fresher</option>
+                            <option value="Nhân sự (HR)">Nhân sự (HR)</option>
+                            <option value="Marketing / Sales">Marketing / Sales</option>
+                            <option value="Tài chính / Kế toán">Tài chính / Kế toán</option>
+                            <option value="Chủ doanh nghiệp / Quản lý">Chủ doanh nghiệp / Quản lý</option>
+                            <option value="Khác">Khác</option>
                         </select>
                     </div>
                     <div class="pt-2">
@@ -1511,8 +1511,8 @@
             }, 1500);
         }
 
-        // Xử lý Form Submit (Giả lập)
-        function submitForm(e) {
+        // Xử lý Form Submit (Đẩy data về Google Sheet)
+        async function submitForm(e) {
             e.preventDefault();
             const btn = e.target.querySelector('button[type="submit"]');
             const originalText = btn.innerHTML;
@@ -1521,19 +1521,37 @@
             btn.disabled = true;
             btn.classList.add('opacity-80');
 
-            setTimeout(() => {
-                btn.innerHTML = `<i class="fas fa-check-circle mr-2"></i> Gửi thành công!`;
-                btn.classList.replace('bg-mindx-red', 'bg-green-600');
+            // TODO: Thay thế chuỗi này bằng URL Web App của Google Apps Script bạn vừa tạo
+            const scriptURL = 'https://script.google.com/macros/s/AKfycbwV93saDuZFn_EonYVx34EBOQbfKBTbDP_WgStlURfOeUvmNJ3MWgfcoKAsqEVIk4CckQ/exec';
+            const form = e.target;
+            const formData = new FormData(form);
 
+            try {
+                const response = await fetch(scriptURL, { method: 'POST', body: formData });
+                if (response.ok) {
+                    btn.innerHTML = `<i class="fas fa-check-circle mr-2"></i> Gửi thành công!`;
+                    btn.classList.replace('bg-mindx-red', 'bg-green-600');
+
+                    setTimeout(() => {
+                        closeModal();
+                        form.reset(); // Reset form
+                        btn.innerHTML = originalText;
+                        btn.classList.replace('bg-green-600', 'bg-mindx-red');
+                        btn.disabled = false;
+                        btn.classList.remove('opacity-80');
+                    }, 2000);
+                } else {
+                    throw new Error('Network response was not ok');
+                }
+            } catch (error) {
+                console.error('Error!', error.message);
+                btn.innerHTML = `<i class="fas fa-exclamation-circle mr-2"></i> Lỗi, thử lại sau!`;
                 setTimeout(() => {
-                    closeModal();
-                    e.target.reset(); // Reset form
                     btn.innerHTML = originalText;
-                    btn.classList.replace('bg-green-600', 'bg-mindx-red');
                     btn.disabled = false;
                     btn.classList.remove('opacity-80');
-                }, 2000);
-            }, 1500);
+                }, 3000);
+            }
         }
     </script>
 </body>
